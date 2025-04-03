@@ -1,0 +1,242 @@
+
+
+
+<section class="relative bg-gradient-to-r from-teal-500 via-teal-600 to-blue-600 text-white py-24 text-center shadow-lg">
+    
+    <!-- Website Name - Bigger & More Recognizable -->
+    <div class="absolute top-4 left-1/2 transform -translate-x-1/2">
+        <h1 class="text-6xl font-extrabold tracking-wide drop-shadow-2xl animate-pulse">
+            📚 Book Haven
+        </h1>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 mt-16">
+        <h2 class="text-5xl font-bold drop-shadow-lg animate-fade-in">Welcome to Book Haven</h2>
+        <p class="mt-6 text-xl text-gray-100 leading-relaxed">
+            Your gateway to a universe of stories, knowledge, and imagination. Dive into free books and explore endless adventures!
+        </p>
+
+        <!-- Buttons -->
+        <div class="mt-10 flex justify-center space-x-6">
+            <a href="#" 
+               class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-white text-teal-600 shadow-md hover:bg-gray-200 hover:shadow-lg transition transform hover:scale-105">
+                Get Started 🚀
+            </a>
+            <a href="#about" 
+               class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-teal-700 text-white shadow-md hover:bg-teal-800 hover:shadow-lg transition transform hover:scale-105">
+                Learn More 📖
+            </a>
+        </div>
+
+        <!-- Decorative Glow -->
+        <div class="absolute inset-x-0 bottom-0 h-1 bg-white/50 w-3/4 mx-auto rounded-full"></div>
+    </div>
+</section>
+
+</section>
+    
+    <nav class="bg-gray-800 p-4 text-white flex justify-between items-center shadow-lg">
+        <a href="index.html" class="text-2xl font-bold hover:text-teal-400">Book Haven</a>
+        
+        <div class="flex space-x-4 items-center">
+            <select onchange="location.href=this.value;" class="px-3 py-2 rounded-lg shadow-md text-gray-800">
+                <option value="#">Select Genre</option>
+                <option value="#fiction">Fiction</option>
+                <option value="#non-fiction">Non-Fiction</option>
+                <option value="#science-fiction">Science Fiction</option>
+            </select>
+        </div>
+        
+        <a href="login.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-teal-700 transition">Login</a>
+    </nav>
+
+    
+    
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Book Reading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Book Reading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-200 text-gray-900">
+    
+    <div class="relative w-full max-w-screen-lg mx-auto overflow-hidden rounded-lg shadow-xl mt-12 bg-white/90 p-4">
+        <div class="flex w-[300%] transition-transform duration-700 ease-in-out" id="carousel">
+            <div class="w-1/3 relative">
+                <img src="fix.avif" alt="Fiction" class="w-full h-[400px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-500">
+                <p class="absolute bottom-10 left-6 text-white text-xl font-semibold drop-shadow-lg">
+                    Fiction
+                </p>
+            </div>
+            <div class="w-1/3 relative">
+                <img src="non f.jpg" alt="Non-Fiction" class="w-full h-[400px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-500">
+                <p class="absolute bottom-10 left-6 text-white text-xl font-semibold drop-shadow-lg">
+                    Non-Fiction
+                </p>
+            </div>
+            <div class="w-1/3 relative">
+                <img src="science1.jpg" alt="Science Fiction" class="w-full h-[400px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-500">
+                <p class="absolute bottom-10 left-6 text-white text-xl font-semibold drop-shadow-lg">
+                    Science Fiction
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation Dots (Smaller, White, and Darker for Active One) -->
+        <div class="absolute bottom-5 right-5 flex space-x-1" id="dots">
+            <span class="h-2 w-2 bg-white/50 rounded-full transition-all duration-300"></span>
+            <span class="h-2 w-2 bg-white/50 rounded-full transition-all duration-300"></span>
+            <span class="h-2 w-2 bg-white/50 rounded-full transition-all duration-300"></span>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const dots = document.getElementById('dots').children;
+        let index = 0;
+        
+        function scrollCarousel() {
+            index = (index + 1) % 3;
+            carousel.style.transform = `translateX(-${index * 100 / 3}%)`;
+
+            // Update active dot color
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-white/90');
+                dots[i].classList.add('bg-white/50');
+            }
+            dots[index].classList.remove('bg-white/50');
+            dots[index].classList.add('bg-white/90');
+        }
+        
+        setInterval(scrollCarousel, 3000);
+    </script>
+
+</body>
+</html>
+
+
+            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <body class="bg-gray-100">
+
+        <!-- Book Sections -->
+        <div class="max-w-6xl mx-auto p-4">
+            <!-- Fiction Section -->
+            <div id="fiction" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-teal-600 text-white py-2 px-4 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-center">Fiction</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 text-center">
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="The Great Gatsby.webp" class="border border-gray-300 rounded-lg shadow-md mx-auto object-contain h-32 w-32">
+                        <p class="mt-2 font-bold text-teal-800">The Great Gatsby</p>
+                        <p class="text-gray-600">By F. Scott Fitzgerald</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐☆</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="to killa.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto object-contain h-32 w-32">
+                        <p class="mt-2 font-bold text-teal-800">To Kill a Mockingbird</p>
+                        <p class="text-gray-600">By Harper Lee</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="1984.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto object-contain h-32 w-32">
+                        <p class="mt-2 font-bold text-teal-800">1984</p>
+                        <p class="text-gray-600">By George Orwell</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="#" class="bg-teal-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-teal-700 transition">More</a>
+                </div>
+            </div>
+    
+            <!-- Non-Fiction Section -->
+            <div id="non-fiction" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow mt-8">
+                <div class="bg-teal-600 text-white py-2 px-4 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-center">Non-Fiction</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 text-center">
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="sapiens.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Sapiens: A Brief History of Humankind</p>
+                        <p class="text-gray-600">By Yuval Noah Harari</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="educated.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Educated</p>
+                        <p class="text-gray-600">By Tara Westover</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐☆</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="becoming.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Becoming</p>
+                        <p class="text-gray-600">By Michelle Obama</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="#" class="bg-teal-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-teal-700 transition">More</a>
+                </div>
+            </div>
+    
+            <!-- Science Fiction Section -->
+            <div id="science-fiction" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow mt-8">
+                <div class="bg-teal-600 text-white py-2 px-4 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-center">Science Fiction</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 text-center">
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="dune.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Dune</p>
+                        <p class="text-gray-600">By Frank Herbert</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="neuromancer.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Neuromancer</p>
+                        <p class="text-gray-600">By William Gibson</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐☆</p>
+                    </div>
+                    <div class="hover:scale-105 transform transition-transform">
+                        <img src="enders-game.jpg" class="border border-gray-300 rounded-lg shadow-md mx-auto h-48 w-full">
+                        <p class="mt-2 font-bold text-teal-800">Ender's Game</p>
+                        <p class="text-gray-600">By Orson Scott Card</p>
+                        <p class="mt-1 text-yellow-500">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="#" class="bg-teal-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-teal-700 transition">More</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6 mt-16">
+            <div class="text-center">
+                <p class="font-bold">Book Haven</p>
+                <p>&copy; 2025 Book Haven. All Rights Reserved.</p>
+            </div>
+        </footer>
+    
+    </body>
+    
+
+
+
+
